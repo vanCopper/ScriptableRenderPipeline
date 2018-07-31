@@ -109,7 +109,7 @@ namespace UnityEditor.Experimental.Rendering.HDPipeline
 
                 // Material
                 newAsset.preIntegratedFGD_GGXDisneyDiffuse = Load<Shader>(HDRenderPipelinePath + "Material/PreIntegratedFGD/PreIntegratedFGD_GGXDisneyDiffuse.shader");
-                newAsset.preIntegratedFGD_CharlieClothLambert = Load<Shader>(HDRenderPipelinePath + "Material/PreIntegratedFGD/PreIntegratedFGD_CharlieClothLambert.shader");
+                newAsset.preIntegratedFGD_CharlieFabricLambert = Load<Shader>(HDRenderPipelinePath + "Material/PreIntegratedFGD/PreIntegratedFGD_CharlieFabricLambert.shader");
 
                 // Utilities / Core
                 newAsset.encodeBC6HCS = Load<ComputeShader>(CorePath + "CoreResources/EncodeBC6H.compute");
