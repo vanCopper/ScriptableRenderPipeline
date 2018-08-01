@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.TestTools;
 
 namespace UnityEditor.TestTools.Graphics
 {
@@ -25,8 +24,8 @@ namespace UnityEditor.TestTools.Graphics
                 return (bool)isRunningField.GetValue(null);
             }
         }
-
-        public void Setup()
+        
+        public void Setup(string rootImageTemplatePath)
         {
             ColorSpace colorSpace;
             BuildTarget buildPlatform;
@@ -53,7 +52,7 @@ namespace UnityEditor.TestTools.Graphics
 
             foreach (var api in graphicsDevices)
             {
-                var images = new Dictionary<string, string>();//EditorGraphicsTestCaseProvider.CollectReferenceImagePathsFor(refenceImageRoot, colorSpace, runtimePlatform, api);
+                var images = EditorGraphicsTestCaseProvider.CollectReferenceImagePathsFor(rootImageTemplatePath, colorSpace, runtimePlatform, api);
 
                 Utils.SetupReferenceImageImportSettings(images.Values);
 
