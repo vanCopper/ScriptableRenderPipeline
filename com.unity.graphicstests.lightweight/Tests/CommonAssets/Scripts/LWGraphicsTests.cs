@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class LWGraphicsTests
 {
+
+    public const string lwPackagePath = "Packages/com.unity.graphicstests.lightweight/Tests/ReferenceImages";
+
     [UnityTest, Category("LightWeightRP")]
     [PrebuildSetup("SetupGraphicsTestCases")]
-    [UseGraphicsTestCases("Packages/com.unity.graphicstests.lightweight/ReferenceImages")]
+    [UseGraphicsTestCases(lwPackagePath)]
     public IEnumerator Run(GraphicsTestCase testCase)
     {
         SceneManager.LoadScene(testCase.ScenePath);

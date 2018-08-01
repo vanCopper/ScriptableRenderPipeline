@@ -7,6 +7,6 @@ public class SetupGraphicsTestCases : IPrebuildSetup
 {
     public void Setup()
     {
-        new UnityEditor.TestTools.Graphics.SetupGraphicsTestCases().Setup("Packages/com.unity.graphicstests.lightweight/ReferenceImages");
+        new UnityEditor.TestTools.Graphics.SetupGraphicsTestCases().Setup(LWGraphicsTests.lwPackagePath);
     }
 }
