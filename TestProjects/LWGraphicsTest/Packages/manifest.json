@@ -4,10 +4,12 @@
     "com.unity.render-pipelines.lightweight": "file:../../../com.unity.render-pipelines.lightweight",
     "com.unity.shadergraph": "file:../../../com.unity.shadergraph",
     "com.unity.testframework.graphics": "file:../../../com.unity.testframework.graphics",
+    "com.unity.graphicstests.lightweight": "file:../../../com.unity.graphicstests.lightweight",
     "com.unity.textmeshpro": "1.2.4"
   },
   "testables": [
     "com.unity.render-pipelines.lightweight",
+    "com.unity.graphicstests.lightweight",
     "com.unity.testframework.graphics"
   ]
 }
