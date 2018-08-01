@@ -9,7 +9,7 @@ public class LWGraphicsTests
 {
     [UnityTest, Category("LightWeightRP")]
     [PrebuildSetup("SetupGraphicsTestCases")]
-    [UseGraphicsTestCases]
+    [UseGraphicsTestCases("Packages/com.unity.graphicstests.lightweight/ReferenceImages")]
     public IEnumerator Run(GraphicsTestCase testCase)
     {
         SceneManager.LoadScene(testCase.ScenePath);

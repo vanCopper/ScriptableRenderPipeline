@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,14 +11,14 @@ namespace UnityEditor.TestTools.Graphics
     /// Test framework prebuild step to collect reference images for the current test run and prepare them for use in the
     /// player.
     /// </summary>
-    public class SetupGraphicsTestCases : IPrebuildSetup
+    public class SetupGraphicsTestCases
     {
         private static bool IsBuildingForEditorPlaymode
         {
             get
             {
                 var playmodeLauncher =
-                    typeof(UnityEditor.TestTools.RequirePlatformSupportAttribute).Assembly.GetType(
+                    typeof(RequirePlatformSupportAttribute).Assembly.GetType(
                         "UnityEditor.TestTools.TestRunner.PlaymodeLauncher");
                 var isRunningField = playmodeLauncher.GetField("IsRunning");
 
@@ -54,7 +53,7 @@ namespace UnityEditor.TestTools.Graphics
 
             foreach (var api in graphicsDevices)
             {
-                var images = EditorGraphicsTestCaseProvider.CollectReferenceImagePathsFor(colorSpace, runtimePlatform, api);
+                var images = new Dictionary<string, string>();//EditorGraphicsTestCaseProvider.CollectReferenceImagePathsFor(refenceImageRoot, colorSpace, runtimePlatform, api);
 
                 Utils.SetupReferenceImageImportSettings(images.Values);
 
